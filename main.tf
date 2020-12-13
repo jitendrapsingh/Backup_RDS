@@ -6,11 +6,6 @@ terraform {
    }
   }
 
-#resource "aws_backup_vault" "testvault" {
- # name        = var.VAULT_NAME
-#  }
-
-
 resource "aws_backup_plan" "plan1" {
   name = var.Plan_Name
 
