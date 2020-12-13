@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "sftptestjitendra"
-    key    = "Backup_Job/tffile"
+    key    = "Backup_Job/tffile1"
     region = "eu-west-1"
    }
   }
@@ -23,6 +23,6 @@ resource "aws_backup_plan" "plan1" {
     backup_options = {
       WindowsVSS = "disabled"
     }
-    resource_type = "EC2"
+    resource_type = "RDS"
   }
 }
