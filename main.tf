@@ -19,10 +19,4 @@ resource "aws_backup_plan" "plan1" {
     schedule          = "cron(0 12 * * ? *)"
   }
 
-  advanced_backup_setting {
-    backup_options = {
-      WindowsVSS = "disabled"
-    }
-    resource_type = "RDS"
-  }
 }
